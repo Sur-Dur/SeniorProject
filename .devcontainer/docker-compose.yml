@@ -1,0 +1,12 @@
+services:
+  surdur-container:
+    # This is the image builded via the Dockerfile
+    #! If no image is found even after executing "docker build ." try "docker build -t surdur-image ." instead.
+    image: surdur-image
+
+    # Name of the container. It is nice to have a short name referring to the container.
+    container_name: sd
+
+    # This command prevents the container from stop running after composing it up (i.e. runs forever)
+    command: tail -f /dev/null
+    

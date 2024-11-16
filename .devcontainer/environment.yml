@@ -1,6 +1,8 @@
 name: surdur-env
 channels:
+  - anaconda
   - conda-forge
   - defaults
 dependencies:
-  - python=3.12
+  - pip:
+      - fastapi[standard]=0.115.5
