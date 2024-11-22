@@ -8,5 +8,8 @@ services:
     container_name: sd
 
     # This command prevents the container from stop running after composing it up (i.e. runs forever)
-    command: tail -f /dev/null
+    command: ls
     
+    # These paths will be inserted to your Docker engine from your local storage. Works like a flash drive.
+    volumes:
+    - ../app:/app
