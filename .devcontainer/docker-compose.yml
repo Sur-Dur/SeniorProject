@@ -8,7 +8,12 @@ services:
     container_name: sd
 
     # This command prevents the container from stop running after composing it up (i.e. runs forever)
-    command: ls
+    command: |
+      bash -c   "source /opt/conda/etc/profile.d/conda.sh &&
+                conda activate surdur-env &&
+                uvicorn backend.initial_start:app --reload &&
+                curl http://127.0.0.1:8000/ &&
+                echo DONE"
     
     # These paths will be inserted to your Docker engine from your local storage. Works like a flash drive.
     volumes:

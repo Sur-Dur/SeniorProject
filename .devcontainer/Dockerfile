@@ -17,7 +17,7 @@ RUN npm install -g npm@9.8.1
 WORKDIR /app
 
 # Copy application files
-COPY package.json package-lock.json /app/
+COPY package.json /app/
 
 # Clear npm cache and remove potential leftover files
 RUN npm cache clean --force && rm -rf node_modules
@@ -28,6 +28,13 @@ RUN npm install
 # Install Conda dependencies
 COPY environment.yml /app/environment.yml
 RUN conda env update -f /app/environment.yml
+RUN conda clean -afy
+
+# Set the PATH to the Conda environment
+ENV PATH="/opt/conda/envs/myenv/bin:$PATH"
+
+# Optional: Ensure Conda is available in non-interactive sessions
+RUN echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc
 
 # Expose application port (e.g., 3000 for web apps)
 EXPOSE 3000
