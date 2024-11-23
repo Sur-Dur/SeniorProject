@@ -7,13 +7,15 @@ services:
     # Name of the container. It is nice to have a short name referring to the container.
     container_name: sd
 
+    # Maps the localhost to the Docker
+    ports:
+      - "127.0.0.1:8000:8000"
+
     # This command prevents the container from stop running after composing it up (i.e. runs forever)
     command: |
       bash -c   "source /opt/conda/etc/profile.d/conda.sh &&
                 conda activate surdur-env &&
-                uvicorn backend.initial_start:app --reload &&
-                curl http://127.0.0.1:8000/ &&
-                echo DONE"
+                uvicorn backend.initial_start:app --host 0.0.0.0 --port 8000 --reload"
     
     # These paths will be inserted to your Docker engine from your local storage. Works like a flash drive.
     volumes:
