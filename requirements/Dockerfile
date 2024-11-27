@@ -31,7 +31,7 @@ RUN conda env update -f /app/environment.yml
 RUN conda clean -afy
 
 # Set the PATH to the Conda environment
-ENV PATH="/opt/conda/envs/myenv/bin:$PATH"
+ENV PATH="/opt/conda/envs/surdur-env/bin:$PATH"
 
-# Expose application port (e.g., 3000 for web apps)
+# Expose application port
 EXPOSE 8000

@@ -2,8 +2,7 @@
 
 set -e  # Exit immediately if a command exits with a non-zero status
 
-# Change directory to .devcontainer
-cd .devcontainer
+cd requirements
 
 echo "Don't forget to run your Docker engine!"
 

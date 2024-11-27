@@ -24,3 +24,5 @@ services:
     # These paths will be inserted to your Docker engine from your local storage. Works like a flash drive.
     volumes:
     - ../app:/app
+    - ./:/app/requirements
+    - ../README.md:/app/README.md

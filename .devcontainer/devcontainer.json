@@ -1,20 +1,20 @@
 {
-    "name": "Python Dev Container",
-    "build": {
-      "dockerfile": "Dockerfile",
-      "context": ".."
-    },
-    "settings": {
-      "terminal.integrated.shell.linux": "/bin/bash"
-    },
-    "extensions": [
-      "ms-python.python"
-    ],
-    "forwardPorts": [8888],
-    "postCreateCommand": "pip install -r requirements.txt",
-    "remoteUser": "root",
-    "mounts": [
-      "source=${localWorkspaceFolder},target=/workspace,type=bind"
-    ],
-    "workspaceFolder": "/workspace"
+  "name": "My Project",
+  "dockerComposeFile": "../requirements/docker-compose.yml",
+  "service": "surdur-container",
+  "workspaceFolder": "/app",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.pythonPath": "/opt/conda/envs/surdur-env/bin/python",
+        "python.linting.enabled": true,
+        "python.linting.pylintEnabled": true
+      },
+      "extensions": [
+        "ms-python.python",
+        "esbenp.prettier-vscode",  // Add any other extensions you use
+        "dbaeumer.vscode-eslint"
+      ]
+    }
+  }
 }
