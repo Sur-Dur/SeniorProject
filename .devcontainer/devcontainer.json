@@ -1,20 +1,30 @@
 {
-  "name": "My Project",
+  "name": "SurDur",
   "dockerComposeFile": "../requirements/docker-compose.yml",
-  "service": "surdur-container",
+  "service": "backend",
   "workspaceFolder": "/app",
   "customizations": {
     "vscode": {
       "settings": {
         "python.pythonPath": "/opt/conda/envs/surdur-env/bin/python",
         "python.linting.enabled": true,
-        "python.linting.pylintEnabled": true
+        "python.linting.pylintEnabled": true,
+        "files.autoSave": "onFocusChange"
       },
       "extensions": [
         "ms-python.python",
-        "esbenp.prettier-vscode",  // Add any other extensions you use
+        "esbenp.prettier-vscode",
         "dbaeumer.vscode-eslint"
       ]
+    }
+  },
+  "overrideCommand": false,
+  "portsAttributes": {
+    "8000": {
+      "label": "Backend (FastAPI)"
+    },
+    "3000": {
+      "label": "Frontend (React Native)"
     }
   }
 }
