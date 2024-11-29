@@ -21,7 +21,7 @@ services:
     command: |
       bash -c   "source /opt/conda/etc/profile.d/conda.sh &&
                 conda activate surdur-env &&
-                uvicorn backend.main:app --host 0.0.0.0 --port 8000 --reload"
+                uvicorn main:app --host 0.0.0.0 --port 8000 --reload"
     
     # These paths will be inserted to your Docker engine from your local storage. Works like a flash drive.
     volumes:
