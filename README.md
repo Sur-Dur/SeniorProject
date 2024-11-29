@@ -1,2 +1,2 @@
-# SeniorProject
-Bir proje hayal edin bi bitiriyor.
+Sür Dur
+aims to bring you happiness
