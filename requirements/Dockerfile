@@ -10,20 +10,8 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-# Pin npm to a specific version
-RUN npm install -g npm@9.8.1
-
 # Set working directory
 WORKDIR /app
-
-# Copy application files
-COPY package.json /app/
-
-# Clear npm cache and remove potential leftover files
-RUN npm cache clean --force && rm -rf node_modules
-
-# Install dependencies from package.json
-RUN npm install
 
 # Install Conda dependencies
 COPY environment.yml /app/environment.yml

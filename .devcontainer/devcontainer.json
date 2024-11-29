@@ -22,9 +22,6 @@
   "portsAttributes": {
     "8000": {
       "label": "Backend (FastAPI)"
-    },
-    "3000": {
-      "label": "Frontend (React Native)"
     }
   }
 }
