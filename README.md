@@ -1,2 +1,2 @@
-Sür Dur
-aims to bring you happiness
+## The public repository of SürDur
+This repository includes and hosts the website for the app SürDur.
