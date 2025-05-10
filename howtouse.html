@@ -11,6 +11,179 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* Step by Step Guide Styles */
+			.step-wrapper {
+				margin: 4em 0;
+				position: relative;
+			}
+
+			.step-container {
+				display: flex;
+				align-items: center;
+				margin-bottom: 5em;
+				position: relative;
+			}
+
+			.step-container:nth-child(even) {
+				flex-direction: row-reverse;
+			}
+
+			.step-image {
+				flex: 0 0 35%;
+				padding: 1em;
+				text-align: center;
+				position: relative;
+			}
+
+			.step-image img {
+				max-height: 600px;
+				border-radius: 15px;
+				box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+				border: 2px solid #4c5c96;
+			}
+
+			.step-content {
+				flex: 0 0 65%;
+				padding: 2em;
+			}
+
+			.step-number {
+				font-size: 5em;
+				font-weight: 800;
+				color: rgba(76, 92, 150, 0.2);
+				position: absolute;
+				top: -0.5em;
+				left: 0;
+				z-index: -1;
+				line-height: 1;
+			}
+
+			.step-container:nth-child(even) .step-number {
+				left: auto;
+				right: 0;
+			}
+
+			.step-title {
+				font-size: 1.8em;
+				margin-bottom: 0.8em;
+				color: #ffffff;
+				position: relative;
+				display: inline-block;
+			}
+
+			.step-title::after {
+				content: '';
+				position: absolute;
+				bottom: -10px;
+				left: 0;
+				width: 60px;
+				height: 3px;
+				background-color: #4c5c96;
+			}
+
+			.step-container:nth-child(even) .step-content {
+				text-align: right;
+			}
+
+			.step-container:nth-child(even) .step-title::after {
+				left: auto;
+				right: 0;
+			}
+
+			.step-description {
+				margin-bottom: 1.5em;
+				font-size: 1.1em;
+				line-height: 1.6;
+			}
+
+			.step-tips {
+				background-color: rgba(76, 92, 150, 0.2);
+				padding: 1em;
+				border-radius: 5px;
+				border-left: 3px solid #4c5c96;
+			}
+
+			.step-tips h4 {
+				margin-bottom: 0.5em;
+				color: #ffffff;
+			}
+
+			.step-tips p {
+				margin-bottom: 0;
+				font-size: 0.95em;
+			}
+
+			.step-container:nth-child(even) .step-tips {
+				border-left: none;
+				border-right: 3px solid #4c5c96;
+			}
+
+			.section-header {
+				text-align: center;
+				margin-bottom: 3em;
+			}
+
+			.section-header h2 {
+				display: inline-block;
+				border-bottom: 2px solid #4c5c96;
+				padding-bottom: 0.5em;
+			}
+
+			.intro-text {
+				text-align: center;
+				margin-bottom: 3em;
+				padding: 0 10%;
+			}
+
+			.connector {
+				position: absolute;
+				left: 50%;
+				width: 2px;
+				background-color: rgba(76, 92, 150, 0.3);
+				height: calc(100% - 100px);
+				z-index: -1;
+				top: 50px;
+			}
+
+			/* Responsive Styles */
+			@media screen and (max-width: 980px) {
+				.step-container, .step-container:nth-child(even) {
+					flex-direction: column;
+				}
+				
+				.step-image, .step-content {
+					flex: 0 0 100%;
+					width: 100%;
+				}
+				
+				.step-content, .step-container:nth-child(even) .step-content {
+					text-align: left;
+					padding: 2em 1em;
+				}
+				
+				.step-container:nth-child(even) .step-title::after {
+					left: 0;
+					right: auto;
+				}
+				
+				.step-container:nth-child(even) .step-tips {
+					border-right: none;
+					border-left: 3px solid #4c5c96;
+				}
+				
+				.connector {
+					left: 25px;
+				}
+				
+				.step-number {
+					left: 10px !important;
+					right: auto !important;
+					top: -2em;
+					font-size: 4em;
+				}
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -43,14 +216,176 @@
 					<section id="wrapper">
 						<header>
 							<div class="inner">
-								<h2>How to Use</h2>
+								<h2>How to Use SürDur</h2>
+								<p>A step-by-step guide to unlock the full potential of our sustainability platform</p>
 							</div>
 						</header>
 
-        <!-- Content -->
-        <div class="inner">
-            <!-- Add your How to Use content here -->
-        </div>
+                        <!-- Content -->
+                        <div class="wrapper">
+                            <div class="inner">
+                                <div class="intro-text">
+                                    <p>Welcome to the SürDur user guide! Our platform makes sustainable living easy and accessible for everyone. Follow these simple steps to get started and make a positive impact on our planet.</p>
+                                </div>
+                                
+                                <div class="section-header">
+                                    <h2>Getting Started</h2>
+                                </div>
+                                
+                                <div class="step-wrapper">
+                                    <div class="connector"></div>
+                                    
+                                    <!-- Step 1 -->
+                                    <div class="step-container">
+                                        <div class="step-image">
+                                            <img src="images/user_manual/register.gif" alt="Download and Installation" />
+                                        </div>
+                                        <div class="step-content">
+                                            <div class="step-number">01</div>
+                                            <h3 class="step-title">Download and Install</h3>
+                                            <p class="step-description">Start your sustainability journey by downloading the SürDur app from your device's app store. The installation process is quick and straightforward. Just tap the install button and follow the on-screen prompts.</p>
+                                            <div class="step-tips">
+                                                <h4>Pro Tip:</h4>
+                                                <p>Make sure you're connected to Wi-Fi for a faster download experience. SürDur requires iOS 12.0+ or Android 8.0+ to function optimally.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Step 2 -->
+                                    <div class="step-container">
+                                        <div class="step-image">
+                                            <img src="images/user_manual/register_detail.gif" alt="Account Creation" />
+                                        </div>
+                                        <div class="step-content">
+                                            <div class="step-number">02</div>
+                                            <h3 class="step-title">Create Your Account</h3>
+                                            <p class="step-description">After installation, open the app and create your personal account. You can register using your email, phone number, or social media accounts. Fill in basic information to help personalize your sustainability journey.</p>
+                                            <div class="step-tips">
+                                                <h4>Pro Tip:</h4>
+                                                <p>Choose a strong, unique password and enable two-factor authentication for added security. Your sustainability data is important!</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Step 3 -->
+                                    <div class="step-container">
+                                        <div class="step-image">
+                                            <img src="images/user_manual/search.gif" alt="Profile Setup" />
+                                        </div>
+                                        <div class="step-content">
+                                            <div class="step-number">03</div>
+                                            <h3 class="step-title">Set Up Your Profile</h3>
+                                            <p class="step-description">Complete your profile by adding your sustainability interests, goals, and current lifestyle habits. This information helps us customize recommendations specifically for you. You can always update these later.</p>
+                                            <div class="step-tips">
+                                                <h4>Pro Tip:</h4>
+                                                <p>Be honest about your current habits to get the most accurate baseline for improvement. The more detailed information you provide, the more personalized your experience will be.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="section-header">
+                                    <h2>Using Core Features</h2>
+                                </div>
+                                
+                                <div class="step-wrapper">
+                                    <div class="connector"></div>
+                                    
+                                    <!-- Step 4 -->
+                                    <div class="step-container">
+                                        <div class="step-image">
+                                            <img src="images/app/screen4.jpg" alt="Carbon Footprint Tracker" />
+                                        </div>
+                                        <div class="step-content">
+                                            <div class="step-number">04</div>
+                                            <h3 class="step-title">Track Your Carbon Footprint</h3>
+                                            <p class="step-description">Navigate to the "Footprint" tab in the bottom menu. Here you can log daily activities like transportation, energy use, and consumption habits. The app automatically calculates your carbon footprint and shows your impact over time.</p>
+                                            <div class="step-tips">
+                                                <h4>Pro Tip:</h4>
+                                                <p>Enable location services for automatic transportation tracking, and connect smart home devices for real-time energy monitoring. Try to log activities daily for the most accurate results.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Step 5 -->
+                                    <div class="step-container">
+                                        <div class="step-image">
+                                            <img src="images/app/screen5.jpg" alt="Challenge Participation" />
+                                        </div>
+                                        <div class="step-content">
+                                            <div class="step-number">05</div>
+                                            <h3 class="step-title">Join Sustainability Challenges</h3>
+                                            <p class="step-description">Explore the "Challenges" section to find daily, weekly, and monthly sustainability challenges. Join those that interest you and track your progress. Complete challenges to earn points and badges while making real environmental impact.</p>
+                                            <div class="step-tips">
+                                                <h4>Pro Tip:</h4>
+                                                <p>Start with easier challenges and gradually take on more difficult ones. Invite friends to join the same challenges - group participation increases completion rates by 78%!</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Step 6 -->
+                                    <div class="step-container">
+                                        <div class="step-image">
+                                            <img src="images/app/screen6.jpg" alt="Community Engagement" />
+                                        </div>
+                                        <div class="step-content">
+                                            <div class="step-number">06</div>
+                                            <h3 class="step-title">Connect with the Community</h3>
+                                            <p class="step-description">Tap on the "Community" tab to join sustainability forums, share your experiences, and learn from others. Participate in discussions, post your achievements, and get inspired by what others in your community are doing.</p>
+                                            <div class="step-tips">
+                                                <h4>Pro Tip:</h4>
+                                                <p>Join local groups based on your city or region to find nearby sustainability events and initiatives. Community involvement can double your individual impact.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="section-header">
+                                    <h2>Advanced Features</h2>
+                                </div>
+                                
+                                <div class="step-wrapper">
+                                    <div class="connector"></div>
+                                    
+                                    <!-- Step 7 -->
+                                    <div class="step-container">
+                                        <div class="step-image">
+                                            <img src="images/app/screen7.jpg" alt="Personalized Recommendations" />
+                                        </div>
+                                        <div class="step-content">
+                                            <div class="step-number">07</div>
+                                            <h3 class="step-title">Get Personalized Recommendations</h3>
+                                            <p class="step-description">Visit the "For You" section to discover AI-powered sustainability recommendations tailored to your lifestyle. These suggestions are based on your habits, location, and sustainability goals.</p>
+                                            <div class="step-tips">
+                                                <h4>Pro Tip:</h4>
+                                                <p>Rate the recommendations you receive to help the AI learn your preferences better. The more you interact with this feature, the more accurate it becomes.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Step 8 -->
+                                    <div class="step-container">
+                                        <div class="step-image">
+                                            <img src="images/app/screen8.jpg" alt="Impact Reports" />
+                                        </div>
+                                        <div class="step-content">
+                                            <div class="step-number">08</div>
+                                            <h3 class="step-title">Generate Impact Reports</h3>
+                                            <p class="step-description">Access detailed reports about your sustainability journey from the "Impact" tab. View weekly, monthly, and yearly stats showing your progress, carbon savings, and contribution to various UN Sustainable Development Goals.</p>
+                                            <div class="step-tips">
+                                                <h4>Pro Tip:</h4>
+                                                <p>Share your impact reports on social media to inspire others. You can also export them as PDFs for presentations or personal records.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="intro-text">
+                                    <p>Congratulations! You're now ready to make full use of the SürDur platform. Remember, every small action counts towards a more sustainable future. If you need additional help, visit our FAQ section or contact our support team through the app.</p>
+                                    <a href="faq.html" class="button primary">Check our FAQ</a>
+                                </div>
+                            </div>
+                        </div>
 
 				<!-- Footer -->
 				<section id="footer">
